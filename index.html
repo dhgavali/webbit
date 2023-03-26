@@ -14,7 +14,10 @@
       rel="stylesheet"
     />
     <!-- fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-jfZ1xK64hRmWlt7DGd/L5CsLgixL5p5btWl3mcqOzN0ZSxN1Ex6uM7Vuc98UMoDyL/4rxQdOF1iqA0/qwJrBxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 
     <!-- css -->
 
@@ -65,10 +68,150 @@
                     <i class="fa fa-thumbs-down"></i>
                   </button>
                 </div>
-                
+
                 <div>
                   <h6>How to create Responsive Website?</h6>
-                  <p>Posted 2 days ago</p>
+                  <p>
+                    Posted 2 days ago by
+                    <span style="font-weight: bold">@theuser1</span>
+                  </p>
+                  <p>
+                    <b>Views: 303</b> &nbsp; <b>Answers: 3</b> &nbsp;
+                    <b>Comments: 15</b>
+                  </p>
+                </div>
+              </div>
+
+              <button
+                class="btn btn-dark"
+                style="
+                  display: flex;
+                  align-items: center;
+                  max-height: 80px;
+                  height: fit-content;
+                  width: fit-content;
+                  justify-content: center;
+                "
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/bxxnzvfm.json"
+                  trigger="hover"
+                  style="width: 30px; height: 30px; padding: 0; margin: 0"
+                >
+                </lord-icon>
+                Answer
+              </button>
+            </div>
+            <!-- second question card -->
+            <div class="question-card">
+              <div class="question-row">
+                <div class="vote-container">
+                  <button class="upvote-btn">
+                    <i class="fa fa-thumbs-up"></i>
+                  </button>
+                  <button class="downvote-btn">
+                    <i class="fa fa-thumbs-down"></i>
+                  </button>
+                </div>
+
+                <div>
+                  <h6>How to create Responsive Website?</h6>
+                  <p>
+                    Posted 2 days ago by
+                    <span style="font-weight: bold">@theuser1</span>
+                  </p>
+                  <p>
+                    <b>Views: 303</b> &nbsp; <b>Answers: 3</b> &nbsp;
+                    <b>Comments: 15</b>
+                  </p>
+                </div>
+              </div>
+
+              <button
+                class="btn btn-dark"
+                style="
+                  display: flex;
+                  align-items: center;
+                  max-height: 80px;
+                  height: fit-content;
+                  width: fit-content;
+                  justify-content: center;
+                "
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/bxxnzvfm.json"
+                  trigger="hover"
+                  style="width: 30px; height: 30px; padding: 0; margin: 0"
+                >
+                </lord-icon>
+                Answer
+              </button>
+            </div>
+            <div class="question-card">
+              <div class="question-row">
+                <div class="vote-container">
+                  <button class="upvote-btn">
+                    <i class="fa fa-thumbs-up"></i>
+                  </button>
+                  <button class="downvote-btn">
+                    <i class="fa fa-thumbs-down"></i>
+                  </button>
+                </div>
+
+                <div>
+                  <h6>How to create Responsive Website?</h6>
+                  <p>
+                    Posted 2 days ago by
+                    <span style="font-weight: bold">@theuser1</span>
+                  </p>
+                  <p>
+                    <b>Views: 303</b> &nbsp; <b>Answers: 3</b> &nbsp;
+                    <b>Comments: 15</b>
+                  </p>
+                </div>
+              </div>
+
+              <button
+                class="btn btn-dark"
+                style="
+                  display: flex;
+                  align-items: center;
+                  max-height: 80px;
+                  height: fit-content;
+                  width: fit-content;
+                  justify-content: center;
+                "
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/bxxnzvfm.json"
+                  trigger="hover"
+                  style="width: 30px; height: 30px; padding: 0; margin: 0"
+                >
+                </lord-icon>
+                Answer
+              </button>
+            </div>
+            <div class="question-card">
+              <div class="question-row">
+                <div class="vote-container">
+                  <button class="upvote-btn">
+                    <i class="fa fa-thumbs-up"></i>
+                  </button>
+                  <button class="downvote-btn">
+                    <i class="fa fa-thumbs-down"></i>
+                  </button>
+                </div>
+
+                <div>
+                  <h6>How to create Responsive Website?</h6>
+                  <p>
+                    Posted 2 days ago by
+                    <span style="font-weight: bold">@theuser1</span>
+                  </p>
+                  <p>
+                    <b>Views: 303</b> &nbsp; <b>Answers: 3</b> &nbsp;
+                    <b>Comments: 15</b>
+                  </p>
                 </div>
               </div>
 
@@ -114,6 +257,26 @@
       });
       hamburguer.addEventListener("click", () => {
         nav_list.classList.toggle("active");
+      });
+    </script>
+
+    <script>
+      const upvote = document.querySelector(".upvote-btn");
+      const downvote = document.querySelector(".downvote-btn");
+
+      upvote.addEventListener("click", function () {
+        if (upvote.classList.contains("clicked")) {
+          upvote.classList.remove("clicked");
+        } else {
+          upvote.classList.add("clicked");
+        }
+      });
+      downvote.addEventListener("click", function () {
+        if (downvote.classList.contains("clicked")) {
+          downvote.classList.remove("clicked");
+        } else {
+          downvote.classList.add("clicked");
+        }
       });
     </script>
   </body>

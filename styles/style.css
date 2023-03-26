@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,800');
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,800");
 
 :root {
   --primary-color: #222146;
@@ -40,8 +40,8 @@ nav {
   padding: 1em 2em;
 }
 
-.nav-logo{
-  color: white;
+.nav-logo {
+  color: rgb(255, 234, 0);
   text-decoration: none;
   font-size: 1.3rem;
 }
@@ -191,30 +191,28 @@ nav {
   }
 }
 
-
-
 /* homepage styling */
-.homepage .heading-row{
+.homepage .heading-row {
   display: flex;
   padding: 0 2em;
   justify-content: space-between;
 }
 
-.homepage .heading-row h4{
-  color: white ;
-}
-
-.homepage hr{
+.homepage .heading-row h4 {
   color: white;
 }
 
-.homepage .sidebar{
-color: white;
-}
-.homepage{
+.homepage hr {
   color: white;
 }
-.homepage .questions-list .question-card{
+
+.homepage .sidebar {
+  color: white;
+}
+.homepage {
+  color: white;
+}
+.homepage .questions-list .question-card {
   padding: 1em 2em;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
@@ -222,72 +220,58 @@ color: white;
   color: black;
   display: flex;
   justify-content: space-between;
+  margin: 1em;
 }
 
-.question-card .question-row h6{
+.question-card:hover{
+  transition: .4s;
+  transform: scale(1.01);
+  cursor: pointer;
+
+}
+.question-card .question-row h6 {
   color: var(--primary-color);
   font-weight: bold;
+}
 
+.question-row {
+  display: flex;
 }
 
 
+@media screen and (max-width: 600px) {
+  .question-card {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+  
+}
 /* upvote downvote buttons */
 
 .vote-container {
   display: flex;
+  justify-content: center;
   align-items: center;
+  flex-flow: column;
+  padding-right: 20px;
 }
-
-.upvote-btn,
-.downvote-btn {
+.vote-container button {
+  margin: 0.2em;
   border: none;
+  font-size: 1.5rem;
   background-color: transparent;
-  cursor: pointer;
-  margin-right: 10px;
 }
 
-.upvote-btn:focus,
-.downvote-btn:focus {
-  outline: none;
-}
-
-.upvote-btn i,
-.downvote-btn i {
-  font-size: 24px;
-}
-
-.upvote-btn.clicked i {
+.upvote-btn.clicked {
   color: green;
-  animation-name: upvote-animation;
-  animation-duration: 0.5s;
+  transition: 0.4s;
+  transform: scale(1.1);
 }
 
-.downvote-btn.clicked i {
-  color: red;
-  animation-name: downvote-animation;
-  animation-duration: 0.5s;
-}
+.downvote-btn.clicked {
+  color: rgb(255, 54, 54);
 
-@keyframes upvote-animation {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes downvote-animation {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+  transition: 0.4s;
+  transform: scale(1.1);
 }
