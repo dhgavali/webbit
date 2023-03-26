@@ -13,7 +13,11 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-jfZ1xK64hRmWlt7DGd/L5CsLgixL5p5btWl3mcqOzN0ZSxN1Ex6uM7Vuc98UMoDyL/4rxQdOF1iqA0/qwJrBxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- css -->
+
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
@@ -42,11 +46,61 @@
         <span class="line"></span>
       </div>
     </nav>
-    <div class="container">
-      <div class="row justify-content-center align-items-center g-2">
-        <div class="col">Column</div>
-        <div class="col">Column</div>
-        <div class="col">Column</div>
+    <div class="container-fluid">
+      <div class="homepage row justify-content-center align-items-center g-2">
+        <div class="col-md-9">
+          <div class="heading-row">
+            <h4>Top Questions</h4>
+            <button class="btn btn-warning">Ask Question</button>
+          </div>
+          <hr />
+          <section class="questions-list">
+            <div class="question-card">
+              <div class="question-row">
+                <div class="vote-container">
+                  <button class="upvote-btn">
+                    <i class="fa fa-thumbs-up"></i>
+                  </button>
+                  <button class="downvote-btn">
+                    <i class="fa fa-thumbs-down"></i>
+                  </button>
+                </div>
+                
+                <div>
+                  <h6>How to create Responsive Website?</h6>
+                  <p>Posted 2 days ago</p>
+                </div>
+              </div>
+
+              <button
+                class="btn btn-dark"
+                style="
+                  display: flex;
+                  align-items: center;
+                  max-height: 80px;
+                  height: fit-content;
+                  width: fit-content;
+                  justify-content: center;
+                "
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/bxxnzvfm.json"
+                  trigger="hover"
+                  style="width: 30px; height: 30px; padding: 0; margin: 0"
+                >
+                </lord-icon>
+                Answer
+              </button>
+            </div>
+          </section>
+        </div>
+
+        <div class="col-md-3 sidebar">
+          <h5>Popular Questions</h5>
+          <div class="pop-questions">
+            <div class="que-mini-card"></div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>

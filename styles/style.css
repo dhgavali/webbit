@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,800');
+
+:root {
+  --primary-color: #222146;
+  --light-color: #4e4acf;
+}
+
 *,
 *:before,
 *:after {
@@ -6,14 +13,14 @@
   box-sizing: inherit;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 10px;
   box-sizing: border-box;
   background-color: #06051e;
   /* background-color: teal; */
 }
 header {
-  background-color: #222146;
+  background-color: var(--primary-color);
   width: 100%;
 }
 .container {
@@ -181,5 +188,106 @@ nav {
   }
   .nav-list.active {
     bottom: 0px;
+  }
+}
+
+
+
+/* homepage styling */
+.homepage .heading-row{
+  display: flex;
+  padding: 0 2em;
+  justify-content: space-between;
+}
+
+.homepage .heading-row h4{
+  color: white ;
+}
+
+.homepage hr{
+  color: white;
+}
+
+.homepage .sidebar{
+color: white;
+}
+.homepage{
+  color: white;
+}
+.homepage .questions-list .question-card{
+  padding: 1em 2em;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
+  background-color: rgb(226, 249, 255);
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.question-card .question-row h6{
+  color: var(--primary-color);
+  font-weight: bold;
+
+}
+
+
+/* upvote downvote buttons */
+
+.vote-container {
+  display: flex;
+  align-items: center;
+}
+
+.upvote-btn,
+.downvote-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.upvote-btn:focus,
+.downvote-btn:focus {
+  outline: none;
+}
+
+.upvote-btn i,
+.downvote-btn i {
+  font-size: 24px;
+}
+
+.upvote-btn.clicked i {
+  color: green;
+  animation-name: upvote-animation;
+  animation-duration: 0.5s;
+}
+
+.downvote-btn.clicked i {
+  color: red;
+  animation-name: downvote-animation;
+  animation-duration: 0.5s;
+}
+
+@keyframes upvote-animation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes downvote-animation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
