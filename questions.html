@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questions Page</title>
+    <link rel="stylesheet" href="styles/questions.css" />
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/questions.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- quesitons screen -->
+      <div class="que-block">
+        <div class="toprow">
+          <h3 style="color: rgb(226, 249, 255)">
+            How to create Responsive Website?
+          </h3>
+
+          <div style="display: flex; justify-content: space-between">
+            <p>Posted 2 days ago by <b>@theuser1</b></p>
+            <p>
+              <b>Views: 303</b> &nbsp; <b>Answers: 3</b> &nbsp;
+              <b>Comments: 15</b>
+            </p>
+          </div>
+        </div>
+        <hr />
+        <div class="question">
+          Hey there, <br />
+          Is it possible in Firestore to delete some documents, where the "Value
+          Name" is the same? <br />
+          For example: I have some UID's as Documents inside a Collection.
+          Inside these Documents will be saved two types of
+          <code>Value Names</code>.
+          <br />
+          1st "Value Name" is called "byCar". 2nd "Value Name" is called
+          "byFoot". Now I want to delete all Documents, where the "Value Name"
+          is <code>equal to "byCar"</code>
+          <br />
+          All other documents, where the "Value Name" is "byFoot" will be
+          untouched. Is something like this possible? I program in
+          <code>Flutter / Dart</code> and it would be awesome, if someone could
+          provide me an answer, because I was not able to find somthing on the
+          internet.
+        </div>
+        <div class="vote-container">
+          <button class="upvote-btn">
+            <i class="fa fa-thumbs-up"></i>
+          </button>
+          <button class="downvote-btn">
+            <i class="fa fa-thumbs-down"></i>
+          </button>
+        </div>
+        
+        <div class="extra-btns">
+          <button class="btn btn-success">Add Answer</button>
+          <button class="btn btn-dark">Add Comment</button>
+        </div>
+        <hr />
+
+        <div class="ans-heading">
+          <h3 >Answers: </h3>  <select name="" id="">
+            <option value="" hidden>Sort by</option>
+            <option value="">Highest Score</option>
+            <option value="">Most Recent</option>
+            <option value="">Oldest one</option>
+          </select>
+        </div>
+        <p>1 answer</p>
+
+        <div class="ans-block">
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const hamburguer = document.querySelector(".hamburguer");
+      const nav_list = document.querySelector(".nav-list");
+
+      hamburguer.addEventListener("click", () => {
+        hamburguer.classList.toggle("active");
+      });
+      hamburguer.addEventListener("click", () => {
+        nav_list.classList.toggle("active");
+      });
+    </script>
+
+    <script>
+      const upvote = document.querySelector(".upvote-btn");
+      const downvote = document.querySelector(".downvote-btn");
+
+      upvote.addEventListener("click", function () {
+        if (upvote.classList.contains("clicked")) {
+          upvote.classList.remove("clicked");
+        } else {
+          upvote.classList.add("clicked");
+        }
+      });
+      downvote.addEventListener("click", function () {
+        if (downvote.classList.contains("clicked")) {
+          downvote.classList.remove("clicked");
+        } else {
+          downvote.classList.add("clicked");
+        }
+      });
+    </script>
+  </body>
+</html>
